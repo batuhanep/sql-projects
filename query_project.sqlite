@@ -1,0 +1,36 @@
+--select *
+--from nomnom
+--where cuisine = 'Chinese';
+
+--select *
+--from nomnom
+--where review >= 4;
+
+--SELECT *
+--FROM nomnom
+--WHERE cuisine = 'Italian' and price = '$$$';
+
+--SELECT *
+--FROM nomnom
+--WHERE name LIKE '%meatball%';
+
+--SELECT *
+--FROM nomnom
+--WHERE neighborhood = 'Midtown' OR neighborhood = 'Downtonw' OR neighborhood = 'Chinatown';
+
+--SELECT *
+--FROM nomnom
+--WHERE health IS NULL;
+
+--SELECT *
+--FROM nomnom
+--ORDER BY review DESC;
+
+SELECT name,
+  CASE when review > 4.5 then 'Extraordinary'
+  when review > 4 then 'Excellent'
+  when review > 3 then 'Good'
+  when review > 3 then 'Fair'
+  else 'Poor'
+  end as 'reviews'
+  from nomnom;
